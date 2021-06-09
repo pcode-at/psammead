@@ -18,3 +18,5 @@ packages/**/dist
 packages/**/esm
 
 published.txt
+
+storybook-static
