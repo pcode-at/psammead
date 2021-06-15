@@ -7,19 +7,19 @@ module.exports = {
       browserName: 'opera',
       viewport: { width: 1366, height: 768 },
       dockerImage: 'browsers/safari:13.0',
-      limit: 2,
+      // limit: 2,
     },
     'webkit.tablet': {
       browserName: 'opera',
       viewport: { width: 768, height: 1024 },
       dockerImage: 'browsers/safari:13.0',
-      limit: 2,
+      // limit: 2,
     },
     'webkit.mobile': {
       browserName: 'opera',
       viewport: { width: 360, height: 640 },
       dockerImage: 'browsers/safari:13.0',
-      limit: 2,
+      // limit: 2,
     },
     'chrome.desktop': {
       browserName: 'chrome',
