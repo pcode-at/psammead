@@ -6,6 +6,11 @@ import { ampDecorator } from '../../../../.storybook/preview';
 
 storiesOf('Components/Images/ImagePlaceholderAmp', module)
   .addDecorator(ampDecorator)
+  .addParameters({
+    creevey: {
+      skip: { reason: 'avoid cannot take screenshot with 0 height error ' },
+    },
+  })
   .add(
     'Amp Image placeholder',
     () => (

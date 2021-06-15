@@ -231,6 +231,11 @@ const generate2FeatureStory = () => args => (
 storiesOf('Components/StoryPromo/StoryPromo', module)
   .addDecorator(withKnobs)
   .addDecorator(withServicesKnob())
+  .addParameters({
+    creevey: {
+      skip: { reason: 'flaky ' },
+    },
+  })
   .add('Regular promo', generateStory({ promoType: 'regular' }), {
     notes,
     knobs: { escapeHTML: false },

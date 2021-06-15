@@ -117,6 +117,11 @@ storiesOf('Components/SocialEmbed/Canonical', module)
 storiesOf('Components/SocialEmbed/AMP', module)
   .addDecorator(withKnobs({ escapeHTML: false }))
   .addDecorator(withServicesKnob())
+  .addParameters({
+    creevey: {
+      skip: { reason: 'avoid cannot take screenshot with 0 height error ' },
+    },
+  })
   .addDecorator(story => (
     <>
       <Helmet htmlAttributes={{ amp: true }}>

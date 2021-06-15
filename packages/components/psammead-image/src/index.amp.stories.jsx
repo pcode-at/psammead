@@ -4,6 +4,9 @@ import { ampDecorator } from '../../../../.storybook/preview';
 
 const additionalProps = {
   layout: 'responsive',
+  creevey: {
+    skip: { reason: 'avoid cannot take screenshot with 0 height error ' },
+  },
 };
 
 stories(

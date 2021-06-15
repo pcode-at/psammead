@@ -17,7 +17,13 @@ storiesOf('Components/Copyright', module)
         </Copyright>
       );
     },
-    { notes, knobs: { escapeHTML: false } },
+    {
+      notes,
+      knobs: { escapeHTML: false },
+      creevey: {
+        skip: { reason: 'avoid cannot take screenshot with 0 height error ' },
+      },
+    },
   )
   .add(
     'with visually hidden text',
@@ -32,5 +38,11 @@ storiesOf('Components/Copyright', module)
         </Copyright>
       );
     },
-    { notes, knobs: { escapeHTML: false } },
+    {
+      notes,
+      knobs: { escapeHTML: false },
+      creevey: {
+        skip: { reason: 'avoid cannot take screenshot with 0 height error ' },
+      },
+    },
   );

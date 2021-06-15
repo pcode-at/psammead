@@ -43,9 +43,10 @@
     "test:lint": "eslint --ext .js,jsx,json ./packages ./scripts && stylelint 'packages/**/*.js' 'packages/**/*.jsx' 'scripts/**/*.js'",
     "test:unit": "yarn build && jest --verbose --coverage",
     "test:unit:ci": "jest --verbose --coverage",
-    "test-storybook": "screener-storybook --conf screener.config.js",
+    "start:storybook": "NODE_ENV=development start-storybook --ci -p 6001 -s .storybook/static -c .storybook",
+    "screener:storybook": "screener-storybook --conf screener.config.js",
     "prepare": "husky install",
-    "chromatic": "npx chromatic --project-token=8ee98d535feb"
+    "chromatic:storybook": "npx chromatic --project-token=$CHROMATIC_PROJECT_TOKEN"
   },
   "repository": {
     "type": "git",
@@ -132,6 +133,7 @@
     "browserslist": "^4.14.5",
     "chalk": "^4.1.0",
     "chromatic": "^5.2.0",
+    "creevey": "^0.7.29",
     "enquirer": "^2.3.6",
     "eslint": "^7.10.0",
     "eslint-config-airbnb": "^18.2.0",

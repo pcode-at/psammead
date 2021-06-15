@@ -8,6 +8,11 @@ import VisuallyHiddenText from './index';
 storiesOf('Components/VisuallyHiddenText', module)
   .addDecorator(withKnobs)
   .addDecorator(withServicesKnob())
+  .addParameters({
+    creevey: {
+      skip: { reason: 'avoid cannot take screenshot with 0 height error ' },
+    },
+  })
   .add(
     'default',
     ({ text, service }) => (
